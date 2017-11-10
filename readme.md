@@ -12,7 +12,7 @@ Background information
 ----------------
 Check this blog post to get some context and insight on the developpment of this tool:
 
-[TBD]()
+[Using WebSockets and IE/Edge for C2 communications](https://arno0x0x.wordpress.com/2017/11/10/using-websockets-and-ie-edge-for-c2-communications/)
 
 Architecture
 ----------------
