@@ -24,7 +24,7 @@ XORPASSWORD = 'thisisafuckingbadpassword'
 IDPREFIX = 'wsc2'
 
 # If you choose to clone a site to hide WSC2 websocket components in a real looking site
-# turn CLONESITe to True and set the website you want to clone
+# turn CLONESITE to 'True' and set the website you want to clone
 CLONESITE = False
 CLONESITE_USERAGENT = "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0"
 CLONESITE_URL = "https://www.google.com"

@@ -29,6 +29,7 @@ WSC2 main features:
   - Various stager (*powershell one liner, various JScript file*) - this is not limited, you can easily come up with your own stagers, check the templates folder to get an idea
   - Interactive shell (*with environment persistency*)
   - File transfer back and forth between the agent and C2
+  - Multiple agents support
 
 <img src="https://dl.dropboxusercontent.com/s/ubhgex2d9h8cjr4/wsc2.jpg?dl=0" width="600">
 
@@ -59,6 +60,11 @@ Add the following references to your project:
   2. Microsoft Internet Controls (SHDocVw)
 
 Build !
+
+Todo
+----------------
+  - Add end-to-end encryption layer to communications
+  - Add support for more agent features (*run PS module, take screenshots, keylogger, etc.*)
 
 DISCLAIMER
 ----------------
